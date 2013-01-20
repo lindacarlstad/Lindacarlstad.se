@@ -1,2 +1,15 @@
 application/cache/*
 application/logs/*
+
+application/config/database.php
+modules/paypal/classes/cacert.pem
+modules/paypal/classes/config.php
+
+
+upload/*
+
+images/shop/*
+images/users/*
+files/*
+
+error_log

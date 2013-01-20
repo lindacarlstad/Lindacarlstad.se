@@ -1,0 +1,352 @@
+canvas#ambience {
+	position: fixed;
+	display: block;
+	width: 900px;
+	height: 900px;
+	left: 50%;
+	margin-left: -450px;
+	margin-top: -25px;
+	padding: 0;
+	z-index: -1;
+}
+
+header#header {
+	padding: 0;
+	display: block;
+	clear: both;
+	height: 100px;
+	margin: 0 0 40px 0;
+		
+	figure {
+		display: block;
+		clear: both;
+		margin: 3px auto 0 auto;
+		width: 100px;
+		height: 80px;
+		padding: 0;
+		
+		img {
+			margin: 0;
+			display: block;
+			position: absolute;
+		}
+	}
+	
+	nav {
+		display: table;
+		margin: 5px auto 0 auto;
+		
+		ul {
+			list-style-type: none;
+			display: block;
+			clear: both;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			border: 0;
+			.gradient(#eaeaea; #cecece);			
+			background-color: #e3e3e3;
+			border: 1px solid #cccccc;
+			.box-shadow(inset 0 1px 0 rgba(255,255,255,1), 0 5px 20px -10px rgba(0,0,0,.8));
+			.border-radius(5px);
+			
+			li {
+				float: left;
+				display: block;
+				clear: none;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				border-right: 1px solid rgba(255,255,255,.5);
+				border-left: 1px solid rgba(0,0,0,.1);
+				
+				a {
+					margin: 0;
+					display: block;
+					clear: both;
+					padding: 4px 20px 4px 20px;
+					text-decoration: none;
+					color: #333333;
+					.text-shadow(1px 1px 0 rgba(255,255,255,.5));
+					font-size: 12px;
+					
+					:hover {						
+						.gradient(#e5e5e5; #c9c9c9);
+						color: #000000;
+					}
+					
+					:active {
+						.gradient(#cfcfcf; #b5b5b5);
+						color: #000000;
+						.box-shadow(inset 0 0 10px rgba(0,0,0,.5));
+					}
+				}
+				
+				:last-child {
+					border-right: 0;
+				}
+				
+				:first-child {
+					border-left: 0;
+				}
+			}
+		}
+		
+	}
+}
+
+section#main {
+	width: 1024px;
+	display: table;
+	clear: both;
+	margin: 10px auto 10px auto;
+	overflow-y: hidden;
+	overflow-x: visible;
+	
+	section#left, section#middle, section#right {
+		display: table-cell;
+		vertical-align: top;
+		clear: none;
+		width: 181px;
+		padding: 10px;
+	}
+	
+	section#left #usersection {
+		overflow-y: hidden;
+		overflow-x: visible;
+		border-bottom: 1px solid rgba(255,255,255,.5);
+		.box-shadow(0 1px 0 rgba(0,0,0,.1));
+		padding-bottom: 5px;
+	
+		h1 {
+			font-size: 13px;
+			font-weight: bold;
+			float: left;
+			display: block;
+			clear: none;
+		}
+	
+		h2 {
+			font-weight: bold;
+			margin: 0 0 5px 0;
+			font-size: 14px;
+		}
+		
+		figure {
+			float: left;
+			display: block;
+			clear: none;
+			margin: 0 5px 0 0;
+			width: 69px;
+			height: 69px;
+			.border-radius(3px);
+			border: 1px solid #cccccc;
+			.box-shadow(inset 0 1px 0 rgba(255,255,255,.5));
+			
+			img {
+				width: 69px;
+				height: 69px;
+			}
+		}
+		
+		nav {
+			margin: 0;
+			padding: 0;
+			display: block;
+			clear: none;
+			float: left;
+			
+			ul {
+				display: block;
+				clear: none;
+				list-style-type: none;
+				overflow: hidden;
+				margin: 0;
+				padding: 0;
+				
+				li {
+					display: block;
+					clear: both;
+					margin: 0;
+					padding: 0;
+					
+					a {
+						color: @linkcolor;
+						font-size: 11px;
+						
+						&[href='/logout/']{
+							color: #900000;
+						}
+					}
+				}
+			}
+		}
+		
+		form {
+			margin: 0;
+			padding: 0;
+			
+			label {
+				font-size: 12px;
+				line-height: 16px;
+				margin: 5px 3px 3px 3px;
+				float: left;
+				display: block;
+				clear: none;
+			}
+			
+			input[type="email"], input[type="password"] {
+				width: 165px;
+				height: 20px;
+				margin: 0 3px 0 3px;
+				font-size: 14px;
+				padding: 2px 4px 2px 4px;
+				border: 1px solid #808080;
+				display: block;
+				clear: both;
+				.box-shadow(inset 0 0 10px rgba(0,0,0,.25));
+				
+				:active, :focus {
+					.box-shadow(none);
+				}
+				
+			}
+			
+			input[type="checkbox"]{
+				float: left;
+				width: 16px;
+				height: 16px;
+				display: block;
+				clear: none;
+				margin: 5px 5px 0 3px;
+			}
+			
+			button {
+				display: block;
+				clear: both;
+				float: right;
+			}
+		}
+	}
+	
+	section#last-logged {
+	
+		h3 {
+			font-weight: normal;
+			font-size: 13px;
+			text-transform: uppercase;
+			margin: 15px 0 5px 0;
+			color: #333333;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+		}
+		
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			
+			li {
+				float: left;
+				display: block;
+				clear: both;
+				overflow: hidden;
+				padding: 5px;
+				
+				:nth-child(2n+2){
+					background-color: #f7f7f7;
+				}
+				
+				img {
+					width: 33px;
+					height: 33px;
+					margin-right: 10px;
+					display: inline-block;
+					float: left;
+				}
+				
+				h4 {
+					display: inline-block;
+					clear: none;
+					font-size: 12px;
+				}
+				
+				time {
+					float: right;
+					display: block;
+					clear: none;
+					font-size: 9px;
+					color: #808080;
+				}
+			}
+		}
+	}
+	
+	section#middle {
+		width: 600px;
+		max-width: 600px;
+		padding-top: 0;
+		border-right: 1px solid rgba(0,0,0,.1);
+		border-left: 1px solid rgba(0,0,0,.1);
+		.box-shadow(inset 1px 0 0 rgba(255,255,255,.5), 1px 0 0 rgba(255,255,255,.5));
+	}
+}
+
+#twitter {
+	margin: 20px 0 0 0;
+	
+	h3 {
+		border-bottom: 1px solid #ccc;
+		font-size: 13px;
+		text-transform: uppercase;
+		color: #333;
+		background-image: url(/layout/icons/small/twitter.png);
+		background-repeat: no-repeat;
+		background-position: top right;
+		margin: 0 0 5px 0;
+		padding: 0;
+	}
+	
+	div.twitter-tweet {
+		display: block;
+		clear: both;
+		margin: 10px 0;
+		overflow: hidden;
+		
+		a {
+			font-weight: bold;
+		}
+		
+		p {
+			font-size: 11px;
+			margin: 3px 0;
+			padding: 0;
+			color: #333;
+			line-height: 1.4em;
+			word-wrap: break-word;
+			word-break: hyphenate;
+		}
+		
+		time {
+			float: right;
+			display: block;
+			clear: none;
+			font-size: 9px;
+			color: #808080;
+		}
+	}
+}
+
+footer#footer {
+	width: 1024px;
+	display: block;
+	clear: both;
+	margin: 10px auto 10px auto;
+	border-top: 1px solid rgba(0,0,0,.1);
+	.box-shadow(inset 0 1px  rgba(255,255,255,.5));
+	font-size: 9px;
+	color: #808080;
+	
+	a {
+		color: #808080;
+	}
+}

@@ -1,0 +1,2 @@
+
+	new Form.AutoGrow('text');

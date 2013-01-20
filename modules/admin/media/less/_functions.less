@@ -1,0 +1,43 @@
+.border-radius(@radius: 5px){
+	-webkit-border-radius: @radius;
+	-webkit-background-clip: border;
+	-moz-border-radius: @radius;
+	-moz-background-clip: border;
+	-ms-border-radius: @radius;
+	-ms-background-clip: border;
+	background-clip: border;
+	border-radius: @radius;
+}
+
+.box-shadow(@shadow: 0 0 10px #000000){
+	-webkit-box-shadow: @shadow;
+	-moz-box-shadow: @shadow;
+	-ms-box-shadow: @shadow;
+	box-shadow: @shadow;
+}
+
+.text-shadow(@value: 1px 1px 0 #000000){
+	-webkit-text-shadow: @value;
+	-moz-text-shadow: @value;
+	text-shadow: @value;
+}
+
+.gradient(@from: #ffffff; @to: #000000){
+	background-image: -webkit-linear-gradient(@from, @to);
+	background-image: -o-linear-gradient(@from, @to);
+	background-image: -moz-linear-gradient(@from, @to);
+}
+
+.rotate(@degrees = 45deg){
+	-moz-transform: rotate(@degrees);
+	-webkit-transform: rotate(@degrees);
+	-o-transform: rotate(@degrees);
+	-ms-transform: rotate(@degrees);
+	transform: rotate(@degrees);
+}
+
+.text-overflow(@value = ellipsis){
+	text-overflow: @value;
+	overflow: hidden; 
+	white-space: nowrap;
+}

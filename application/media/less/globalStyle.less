@@ -1,0 +1,361 @@
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	color: #6e1739;
+}
+
+img {
+	border: 0;
+}
+
+h1, h2, h3, h4, h5, h6, a, p, li {
+	word-wrap: break-word;
+	word-break:hyphenate;
+}
+
+a {
+	outline: none;
+	color: #6e1739;
+	text-decoration: none;
+	
+	:hover {
+		text-decoration: underline;
+	}
+}
+
+ul.manage {
+	display: block;
+	float: right;
+	margin: -9px -9px 0 0;
+	padding: 0;
+	list-style-type: none;
+	overflow: hidden;
+	
+	li {
+		float: left;
+		display: block;
+		clear: none;
+		width: 16px;
+		height: 16px;
+		padding: 0;
+		margin: 1px;
+		border: 1px solid #cccccc;
+
+		
+		a {
+			width: 16px;
+			height: 16px;
+			display: block;
+			background-color: #e5e5e5;
+			background-position: center center;
+			background-repeat: no-repeat;
+			
+			&.edit {
+				background-image: url(/layout/icons/small/edit.png);
+			}
+			
+			&.delete {
+				background-image: url(/layout/icons/small/delete.png);
+			}
+		}
+	}
+}
+
+button {
+	display: block;
+	clear: both;
+	padding: 4px 10px 4px 10px;
+	.border-radius(3px);
+	background-color: #e3e3e3;
+	border: 1px solid #aaaaaa;
+	.text-shadow(1px 1px 0 rgba(255,255,255,.5));
+	.box-shadow(inset 0 1px 0 rgba(255,255,255,1));
+	.gradient(#ebebeb; #d9d9d9);
+	color: #333333;
+	line-height: 15px;
+	font-size: 13px;
+	margin: 5px 0 5px 0;
+	
+	:hover {
+		color: #000000;
+		text-decoration: none;
+		.box-shadow(inset 0 1px 0 rgba(255,255,255,.1), inset 0 5px 5px rgba(0,0,0,.1));
+	}
+	
+	:active {
+		.gradient(#bfbfbf; #d1d1d1);
+		.box-shadow(inset 0 1px 0 rgba(255,255,255,.1), inset 0 0 10px rgba(0,0,0,.4));
+		border: 1px solid #808080;
+	}
+	
+	
+	&[type=submit]{
+		float: right;
+		
+		&.delete {
+			color: #ffffff;
+			.text-shadow(1px 1px 0 rgba(0,0,0,.5));
+			border: 1px solid #900000;
+			.gradient(#f02323; #d02121);
+			.box-shadow(inset 0 1px 0 rgba(255,255,255,.5));
+		}
+	}
+}
+
+form {
+	
+	textarea {
+		resize: vertical;
+		padding: 5px;
+		overflow: hidden;
+	}
+}
+
+/*
+ *	Buttonstack
+ */
+ul.buttonstack {
+	padding: 0;
+	display:  table; 
+	overflow: hidden;
+	margin: 10px auto 10px auto;
+	border: 1px solid #aaaaaa;
+	background-color: #e5e5e5;
+	.gradient(#eaeaea; #cecece);
+	list-style: none;
+	
+	li {
+		margin: 0;
+		padding: 0;
+		border-left: 1px solid rgba(0,0,0,.1);
+		float: left;
+		display: block;
+		clear: none;
+		
+		:first-child {
+			border: 0;
+		}
+		
+		a {
+			display: block;
+			clear: both;
+			padding: 5px 15px 5px 15px;
+			.text-shadow(1px 1px 0 #ffffff);
+			color: #666666;
+			font-family: @lucida;
+			font-size: 11px;
+			text-align: center;			
+			line-height: 1.2em;	
+			text-decoration: none;
+			
+			img {
+				margin-right: 10px;
+			}
+			
+			:hover {
+				color: #333333;
+			}
+			
+			:active {
+				color: #333333;
+				.box-shadow(inset 0 0 10px rgba(0,0,0,.25));
+			}
+			
+			&.active {
+				.box-shadow(inset 0 0 10px rgba(0,0,0,.4));
+				.gradient(#b8b8b8; #9c9c9c);
+				color: #333333;
+				.text-shadow(1px 1px 0 rgba(255,255,255,.25));
+			}
+		}
+	}
+	
+	&{.border-radius(3px);}
+	&{.box-shadow(inset 0 1px #ffffff);}
+}
+
+/*
+ *	Tabular data
+ */
+table {
+	display: table;
+	width: 100%;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	margin: 0;
+	padding: 0;
+	border-spacing: 0;
+
+	caption {
+		text-align: center;
+		font-family: @lucida;
+		font-size: 14px;
+		font-weight: bold;
+		margin: 0 0 5px 0;
+	}
+	thead, tfoot {
+		tr {
+			background-color: #e2e2e2;			
+			.gradient(#d9d9d9; #ebebeb);
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			border-top: 1px solid red;
+			
+			th {
+				.text-shadow(1px 1px 0 #ffffff);
+				padding: 4px;
+				border-left: 1px solid rgba(0,0,0,.1);
+				border-top: 1px solid rgba(255,255,255,.75);
+				font-size: 12px;
+				color: #333333;
+				font-weight: normal;
+				overflow: hidden;
+				margin: 0;
+				
+				:before {
+					content: '';
+					height: 1px;
+					width: 100%;
+					background-color: red;
+					position: relative;
+				}
+				
+				:first-child {
+					border-left: 1px solid #cccccc;
+				}
+				
+				:last-child {
+					text-align: right;
+					border-right: 1px solid #cccccc;
+				}
+				
+				&.active {
+					.box-shadow(inset 0 0 10px rgba(0,0,0,.40));
+					border-top: 1px solid rgba(0,0,0,.20);
+				}
+				
+				&.edit, &.delete, &[text=edit], &[text=delete] {
+					width: 40px;
+				}
+				
+				&.image {
+					width: 25px;
+					background-image: url(/layout/icons/small/image.png);
+					background-position: center center;
+					background-repeat: no-repeat;
+				}
+				
+				&.checkbox {
+					width: 20px;
+					padding-left: 6px;
+					
+					input[type=checkbox]{
+						margin: 0 auto 0 2px;
+						width: 12px;
+						height: 12px;
+						display: block;
+					}
+				}
+			}
+			
+					
+		}
+	}
+	thead tr th {
+		border-bottom: 1px solid #cccccc;
+	}
+
+	tbody tr {		
+		
+		:nth-child(2n+2){
+			background-color: #f5f5f5;
+		}
+		
+		&.unread {
+			background-color: #b9c6db;
+			
+			td {
+				color: #000000;
+				.text-shadow(1px 1px 0 rgba(255,255,255,.5));
+			}
+		}
+	
+		td {
+			padding: 4px;
+			border-left: 1px solid rgba(0,0,0,.1);
+			font-size: 11px;
+			color: #333333;
+			
+			:first-child {
+				border-left: 0;
+			}
+				
+			:last-child {
+				text-align: right;
+			}
+			
+			a {
+				text-decoration: none;
+				color: #4a5abb;
+				
+				:visited {
+					color: #bb4aba;
+				}
+			}
+			
+			img {
+				width: 23px;
+				height: 23px;
+				display: block;
+				clear: both;
+				margin: 0 auto 0 auto;
+			}
+			
+			input[type=checkbox] {
+				margin: 0 auto 0 5px;
+				width: 12px;
+				height: 12px;
+				display: block;
+			}
+		}
+		
+		:last-child td {
+			border-bottom: 1px solid #cccccc;
+		}
+	}
+}
+
+textarea {
+	.transition(height; 250ms);
+}
+
+a.not-member {
+	button;
+	background-color: @linda-bordeaux;
+	.gradient(lighten(@linda-bordeaux, 10%); @linda-bordeaux);
+	.box-shadow(inset 0 1px 0 rgba(255,255,255,.25));
+	border: 1px solid darken(@linda-bordeaux, 10%);
+	color: @linda-gold;
+	text-align: center;
+	.text-shadow(none);
+	margin: 10px;
+	padding: 10px;
+	display: block;
+	clear: both;
+	
+	:hover {
+		color: @linda-gold;
+	}
+	
+	:active {		
+		.gradient(@linda-bordeaux; lighten(@linda-bordeaux, 10%));
+	}
+}
+
+a.button {
+	button;
+}
+
+

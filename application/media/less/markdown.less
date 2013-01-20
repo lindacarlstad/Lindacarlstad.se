@@ -1,0 +1,79 @@
+.markdown {
+	font-size: 11px;
+	font-family: @lucida;
+
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: normal;
+		display: block;
+		clear: both;
+		color: #948a51;
+	}
+	
+	h1 {
+		font-size: 22px;
+	}
+	
+	h2 {
+		font-size: 18px;
+	}
+	
+	h3 {
+		font-size: 16px;
+	}
+	
+	h4, h5, h6 {
+		font-size: 12px;
+	}
+	
+	blockquote {
+		color: #808080;
+		text-transform: uppercase;
+		
+		em {
+			color: #000000;
+			text-transform: none;
+			
+			:before, :after {
+				font-size: 18px;
+				line-height: 15px;
+				font-family: @georgia;
+				font-style: italic;
+				display: inline;
+				color: #cccccc;
+			}
+			
+			:before {
+				content: "“";
+				float: left;
+				margin-right: 5px;
+			}
+			
+			:after {
+				content: "”";
+				margin-left: 5px;
+			}
+		}
+	}
+	
+	pre {
+		border: 1px solid #cccccc;
+		background-color: #fafafa;
+		color: #000000;
+		overflow: hidden;
+		padding: 5px;
+		font-size: inherit;
+		font-family: "Consolas", "Courier New", Courier, mono;
+	}
+	
+	img {
+		max-width: 578px;
+		border: 1px solid #cccccc;
+		width: auto;
+	}
+	
+	hr {
+		border: 0;
+		border-bottom: 1px solid  rgba(0,0,0,.1);
+		.box-shadow(0 1px 0 rgba(255,255,255,.5));
+	}
+}

@@ -1,0 +1,88 @@
+
+section#middle h2 {
+	margin: 0 0 20px 0;
+}
+
+section#middle h3 {
+	display: block;
+	clear: both;
+	font-family: @quattro;
+	margin: 0;
+	padding: 4px 8px 4px 8px;
+	background-color: #f2f2f2;
+	.gradient(#ebebeb; #d9d9d9);
+	font-weight: normal;
+	.box-shadow(inset 0 1px 0 #ffffff);
+	border: 1px solid #cccccc;
+	letter-spacing: normal;
+	font-size: 16px;
+	.text-shadow(1px 1px 0 rgba(255,255,255,.5));
+}
+
+section#main fieldset {
+	border: 0;
+	background-color: #f3f3f3;
+	padding: 10px;
+	margin: 0;
+	overflow: hidden;
+
+	p {
+		font-size: 11px;
+		margin: 0;
+		padding: 5px 20px 5px 20px;
+	}
+	
+	figure {
+		width: 500px;
+		
+		img {
+			display: block;
+			clear: both;
+			margin: 5px auto 5px auto;
+		}
+	}
+	
+	label {
+		display: block;
+		clear: both;
+		margin: 10px auto 10px auto;
+		height: 20px;
+		width: 450px;
+		line-height: 20px;
+		font-size: 12px;
+		
+		span {
+			width: 200px;
+			display: block;
+			float: left;
+			clear: none;
+			margin: 3px 20px 0 0;
+			line-height: 20px;
+			height: 20px;
+			text-align: right;
+		}		
+		
+		input[type=text], input[type=password], input[type=file] {
+			height: 20px;
+			margin: 0;
+			float: left;
+			clear: none;
+			display: block;
+			padding: 2px 4px 2px 4px;
+			border: 1px solid #cccccc;
+			width: 180px;
+			.border-radius(3px);
+		}
+		
+		input[type=file] {
+			border: 0;
+		}
+		
+		select:first-child {
+			margin-left: 20px;
+			float: left;
+			display: block;
+			clear: none;
+		}
+	}
+}

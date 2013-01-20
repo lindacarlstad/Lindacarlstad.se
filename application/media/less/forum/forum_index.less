@@ -1,0 +1,235 @@
+section#filter {
+	padding: 10px;
+	border: 1px solid #d9d9d9;
+	background-color: #f7f7f7;
+	overflow: hidden;
+}
+
+section#setcontent {
+	width: 600px;
+	display: block;
+	clear: both;
+	
+	article {
+		display: block;
+		clear: both;
+		overflow: hidden;
+		margin: 5px 0 5px 0;
+		padding: 5px 0 5px 0;
+		border-bottom: 1px solid rgba(0,0,0,.1);
+		
+		&.news {
+		
+			section {
+				background-color: #ededed;
+				
+				:before {
+					background-color: #ededed;
+				}
+			
+				time {
+					float: left;
+				}
+			}		
+		}
+		
+		img.userimage {
+			float: left;
+			display: block;
+			clear: none;
+			.border-radius(3px);
+			height: 69px;
+			width: 69px;
+			margin: 0 20px 0 0;
+		}
+		
+		img {
+			max-width: 490px;
+			max-height: 300px;
+		}
+		
+		section {
+			float: left;
+			display: block;
+			clear: none;
+			background-color: #f7f7f7;
+			width: 490px;
+			padding: 5px 10px 5px 10px;
+			
+			header {
+				margin: 0 0 5px 0;	
+				padding: 0;
+				.box-shadow(none);
+				border: 0;
+				color: #808080;
+				font-size: 9px;
+				
+				h1 {
+					display: block;
+					line-height: 16px;
+					margin-bottom: 3px;
+					
+					a {
+						font-weight: bold;
+						color: #690e31;
+						font-size: 14px;
+					}
+				}
+				
+				a {
+					font-size: 11px;
+					margin: -5px 0 0 0;
+					font-weight: bold;
+					color: #690e31;
+					
+					&[href='/forum/'] {
+						font-size: 9px;
+						font-weight: normal;
+					}
+				}
+				
+				time {
+					display: inline-block;
+					clear: none;
+					float: right;
+					font-size: 9px;
+					color: #808080;
+					margin: 0;
+				}
+				
+				span {
+					color: #808080;
+					font-size: 9px;
+					float: left;
+					margin: 0 0 0 5px;
+					padding: 0;
+					
+					a {
+						font-size: 9px;
+						font-weight: normal;
+					}
+				}
+				
+				a.comment {
+					background-image: url(/layout/icons/small/discuss.png);
+					background-position: top left;
+					background-repeat: no-repeat;
+					margin: 0 0 0 10px;
+					padding: 0 0 0 23px;
+					color: #808080;
+					display: inline-block;
+					font-weight: normal;
+					font-size: 11px;
+				}
+			}
+			
+			a.discuss {
+				width: 60px;
+				display: block;
+				clear: none;
+				height: 15px;
+				padding-top: 30px;
+				color: #b3b3b3;
+				background-color: #ededed;
+				.border-radius(5px);
+				font-size: 11px;
+				text-align: center;
+				float: right;
+				margin: 0 0 0 15px;
+				background-image: url(/layout/icons/discuss.png);
+				background-position: center 5px;
+				background-repeat: no-repeat;
+				
+				:hover {
+					color: #808080;
+					background-color: #e3e3e3;
+					.transition(all; .5s);
+				}
+			}
+			
+			a.button {
+				button;
+				display: inline-block;
+				float: right;
+				clear: none;
+				margin-top: 3px;
+			}
+			
+			:before {
+				content: '';
+				width: 15px;
+				height: 15px;
+				display: block;
+				position: absolute;
+				background-color: #f7f7f7;
+				margin: 5px 0 0 -15px;
+				z-index: -1;
+				.rotate(45deg);
+				
+			}
+							
+			p {
+				font-size: 11px;
+				margin: 5px 0 5px 0;
+				padding: 0;
+				line-height: 17px;
+				display: block;
+				clear: none;
+				width: auto;
+				
+				a {
+					color: #90873c;
+				}
+			}
+			
+			ul {
+				font-size: 11px;
+				list-style-type: none;
+				margin-left: 0;
+				
+				li {						
+					:before {
+						content: '-';
+						display: inline-block;
+						
+					}
+				}
+			}
+			
+			ul.tags {
+				list-style-type: none;
+				display: block;
+				clear: both;
+				margin: 0 0 0 0;
+				padding: 0;
+				
+				li {
+					float: left;
+					display: block;
+					clear: none;
+					margin: 0 5px 0 0;
+					
+					:before {
+						display: none;
+					}
+					
+					a {
+						color: #58bfc5;
+						font-size: 9px;
+						
+						:before {
+							content: '@';
+							margin-right: 1px;
+						}
+						
+						:hover {
+							text-decoration: underline;
+							color: #2c8e94;
+							.transition(color; .5s);
+						}
+					}						
+				}
+			}
+		}
+	}
+}
